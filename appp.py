@@ -31,8 +31,8 @@ def recommend(movie):
 st.header('Movie Recommender System')
 
 # Load the pre-trained models
-movies = pickle.load(open('/Users/monish/Documents/DS/CineMatch/FrontEnd/movie_list.pkl', 'rb'))
-similarity = pickle.load(open('/Users/monish/Documents/DS/CineMatch/FrontEnd/similarity.pkl', 'rb'))
+movies = pickle.load(open('movie_list.pkl', 'rb'))
+similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 # Dropdown for movie selection
 movie_list = movies['title'].values
