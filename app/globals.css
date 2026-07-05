@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+
+  --color-bg: #0a0a0c;
+  --color-bg-vignette: radial-gradient(
+    ellipse at top,
+    rgba(217, 164, 65, 0.08),
+    transparent 60%
+  );
+  --color-surface: #16161a;
+  --color-surface-raised: #1e1e23;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-text: #f2efe9;
+  --color-text-muted: #a4a09a;
+  --color-accent: #d9a441;
+  --color-accent-strong: #f0c05a;
+  --color-danger: #e0685a;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --text-eyebrow: 0.8rem;
+  --text-base: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+  --text-subtitle: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+  --text-hero: clamp(2.5rem, 2rem + 3vw, 4.25rem);
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.875rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-section: clamp(3rem, 2.5rem + 3vw, 6rem);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image: var(--color-bg-vignette);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 2px;
+}
