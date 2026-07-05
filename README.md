@@ -1,5 +1,7 @@
 # CineMatch — Movie Recommender
 
+**Live demo:** https://cinematch-movie-recommender-lime.vercel.app
+
 A content-based movie recommender: search for a movie and get five similar picks with posters, using cosine similarity over TF-IDF/bag-of-words movie metadata (genres, cast, crew, keywords, overview). The model was prototyped in a notebook; the deployed version is a static Next.js site with zero runtime backend.
 
 ## Architecture
