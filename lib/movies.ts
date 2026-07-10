@@ -6,6 +6,11 @@ export type Movie = {
   poster: string | null;
 };
 
+export type MovieSummary = {
+  id: number;
+  title: string;
+};
+
 type MoviesData = {
   movies: Movie[];
   similar: Record<string, number[]>;
@@ -16,6 +21,15 @@ const moviesById = new Map(data.movies.map((movie) => [movie.id, movie]));
 
 export function getAllMovies(): Movie[] {
   return data.movies;
+}
+
+/**
+ * Slim id+title projection, safe to pass from a Server Component to a
+ * Client Component so search can run instantly in the browser instead of
+ * round-tripping to the server on every keystroke.
+ */
+export function getSearchIndex(): MovieSummary[] {
+  return data.movies.map(({ id, title }) => ({ id, title }));
 }
 
 export function getMovieByTitle(title: string): Movie | undefined {
